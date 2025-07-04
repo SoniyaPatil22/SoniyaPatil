@@ -1,14 +1,21 @@
-num1 = input('Enter the first number: ')
-num2 = input('Enter the Second number: ')
-num1 = int(num1)
-num2 = int(num2)
+# Step 1: Take input from the user
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
 
-add = num1 + num2
-sub = num1 - num2
-mul = num1 * num2
-div = num1 / num2
+# Step 2: Perform basic mathematical operations
+addition = num1 + num2
+subtraction = num1 - num2
+multiplication = num1 * num2
 
-print('Addition: ', add)
-print('Subtraction: ', sub)
-print('Multiplication: ', mul)
-print('Division: ', div)
+# To avoid division by zero error
+if num2 != 0:
+    division = num1 / num2
+else:
+    division = "Undefined (cannot divide by zero)"
+
+# Step 3: Display the results
+print("\nResults:")
+print(f"Addition: {addition}")
+print(f"Subtraction: {subtraction}")
+print(f"Multiplication: {multiplication}")
+print(f"Division: {division}")
